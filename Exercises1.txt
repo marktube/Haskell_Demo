@@ -1,0 +1,32 @@
+练习，不需提交，下次上课时检查。
+
+1. Define a function that decides if an integer is even:
+    isEven :: Integer -> Bool
+2. Define a function that decides if an integer is odd:
+    isOdd :: Integer -> Bool
+3. Define a function
+  threeDifferent :: Int -> Int -> Int -> Bool
+So that the result threeDifferent m n p is True iff all three  numbers m,n,p are different.
+4. Write definitions of the following 2 functions 
+smallerRoot:: Float -> Float -> Float -> Float
+largerRoot :: Float -> Float -> Float -> Float
+Which return the smaller and larger real roots of the quadratic(二次方程）separately.
+5. Use QuickCheck to check if your functions are correct.
+
+6. 使用QuickCheck的方法：
+
+1). 在脚本（程序文件）的第一行写
+import Test.QuickCheck     -- 注意大小写
+
+2). 如需检查函数threeDifferent是否正确，可以检查如下性质：
+“如果三个输入互不相同，则该函数返回True，否则该函数返回False”, 其定义如下：
+
+prop_threeDifferent x y z = if (x/=y && x/=z && y /= z) then (threeDifferent x y z == True) else (threeDifferent x y z == False)
+
+ -- 其中 x /= y 表示x与y不相等
+
+3). 在解释器中使用命令quickCheck 测试该性质：
+
+> quickCheck prop_threeDifferent
+
+
