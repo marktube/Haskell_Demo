@@ -1,5 +1,3 @@
-
---刘彦超 12353133，1065362168@qq.com , 移动信息工程学院；
 --由于用到pictures里的sideByside函数所以也把Pictures.hs文件也附上了，字母放大的图形好多，有些做得不是很好看，老师多多包涵。
 
 module Lab2 where
