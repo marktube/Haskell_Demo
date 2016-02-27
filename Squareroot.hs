@@ -1,4 +1,4 @@
---刘彦超 12353133，1065362168@qq.com, 移动信息工程学院
+
 --计算平方根的Newton Raphson公式
 
 module Squareroot where 
